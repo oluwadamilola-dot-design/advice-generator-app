@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | Advice generator app</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="card">
+    <!-- Advice ID Header -->
+    <h1 class="card__title">Advice #<span id="advice-id">117</span></h1>
+
+    <!-- Advice Quote -->
+    <p id="advice-text" class="card__quote">"Click the dice below to generate a piece of advice."</p>
+
+    <!-- Divider Graphic (Desktop vs Mobile separator) -->
+    <picture class="card__divider">
+      <source media="(min-width: 768px)" srcset="images/pattern-divider-desktop.svg">
+      <img src="images/pattern-divider-mobile.svg" alt="divider pattern">
+    </picture>
+
+    <!-- Dice Trigger Button -->
+    <button id="dice-btn" class="card__dice-btn" aria-label="Generate new advice">
+      <img src="images/icon-dice.svg" alt="dice icon">
+    </button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

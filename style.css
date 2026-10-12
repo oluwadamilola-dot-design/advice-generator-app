@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: hsl(218, 23%, 16%); 
+  color: hsl(193, 38%, 86%);         
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* Card Container */
+.card {
+  background-color: hsl(217, 19%, 24%);
+  width: 100%;
+  max-width: 540px;
+  padding: 3rem 2.5rem 4rem;
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Advice Title */
+.card__title {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: hsl(150, 100%, 66%); 
+  margin-bottom: 1.5rem;
+}
+
+/* Advice Quote */
+.card__quote {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.4;
+  margin-bottom: 2.5rem;
+}
+
+/* Divider pattern */
+.card__divider {
+  display: block;
+  margin-bottom: 2.5rem;
+}
+
+.card__divider img {
+  width: 100%;
+  max-width: 444px;
+}
+
+/* Dice Button */
+.card__dice-btn {
+  background-color: hsl(150, 100%, 66%);
+  border: none;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.card__dice-btn:hover {
+  box-shadow: 0 0 40px hsl(150, 100%, 66%);
+}
+
+.card__dice-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
