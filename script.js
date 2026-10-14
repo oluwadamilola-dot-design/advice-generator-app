@@ -11,11 +11,11 @@ const diceButton = document.getElementById("dice-btn");
  */
 async function getAdvice() {
   try {
-    // 1. Loading State: Disable button & show feedback
+    // Loading State: Disable button & show feedback
     diceButton.disabled = true;
     adviceTextParagraph.textContent = "Loading new advice...";
 
-    // 2. Fetch data (Note: fetch does not throw on 404/500 errors automatically)
+    // Fetch data (Note: fetch does not throw on 404/500 errors automatically)
     const response = await fetch(API_URL);
 
     if (!response.ok) {
@@ -28,7 +28,7 @@ async function getAdvice() {
     renderAdvice(data.slip);
 
   } catch (error) {
-    // Error State: Show user-friendly message (Test by going offline in DevTools)
+    // Error State: Show user-friendly message
     console.error("Failed to fetch advice:", error);
     adviceIdSpan.textContent = "ERROR";
     adviceTextParagraph.textContent = "Could not load advice. Please check your internet connection and try again.";
